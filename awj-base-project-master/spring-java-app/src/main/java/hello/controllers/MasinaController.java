@@ -34,7 +34,7 @@ public class MasinaController {
   @RequestMapping(value="/masina/{marca}", method = RequestMethod.GET)
   public ResponseEntity show(@PathVariable("marca") String marca) {
     for(Masina m : this.masini) {
-      if(m.getMarca() == marca) {
+      if(m.getMarca().equals(marca)) {
         return new ResponseEntity<Masina>(m, new HttpHeaders(), HttpStatus.OK);
       }
     }
@@ -44,7 +44,7 @@ public class MasinaController {
   @RequestMapping(value="/masina/{marca}", method = RequestMethod.DELETE)
   public ResponseEntity remove(@PathVariable("marca") String marca) {
     for(Masina m : this.masini) {
-      if(m.getMarca() == marca) {
+      if(m.getMarca().equals(marca)) {
         this.masini.remove(m);
         return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NO_CONTENT);
       }
@@ -55,7 +55,7 @@ public class MasinaController {
   @RequestMapping(value="/masina/{marca}", method = RequestMethod.PUT)
   public ResponseEntity put(@PathVariable("marca") String marca) {
     for(Masina m : this.masini) {
-      if(m.getMarca() == marca) {
+      if(m.getMarca().equals(marca)) {
         m.setMarca("Dacia");
         m.setName("Duster");
         return new ResponseEntity<Masina>(m, new HttpHeaders(), HttpStatus.OK);

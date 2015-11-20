@@ -36,7 +36,7 @@ public class SerialController {
   @RequestMapping(value="/serial/{titlu}", method = RequestMethod.GET)
   public ResponseEntity show(@PathVariable("titlu") String titlu) {
     for(Serial s : this.seriale) {
-      if(s.getTitlu() == titlu) {
+      if(s.getTitlu().equals(titlu)) {
         return new ResponseEntity<Serial>(s, new HttpHeaders(), HttpStatus.OK);
       }
     }
@@ -46,7 +46,7 @@ public class SerialController {
   @RequestMapping(value="/serial/{titlu}", method = RequestMethod.DELETE)
   public ResponseEntity remove(@PathVariable("titlu") String titlu) {
     for(Serial s : this.seriale) {
-      if(s.getTitlu() == titlu) {
+      if(s.getTitlu().equals(titlu)) {
         this.seriale.remove(s);
         return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NO_CONTENT);
       }
@@ -57,7 +57,7 @@ public class SerialController {
   @RequestMapping(value="/serial/{titlu}", method = RequestMethod.PUT)
   public ResponseEntity put(@PathVariable("titlu") String titlu) {
     for(Serial s : this.seriale) {
-      if(s.getTitlu() == titlu) {
+      if(s.getTitlu().equals(titlu)) {
         s.setTitlu("GameOfThrones");
         s.setNumarSez(7);
 		s.setNumarEp(70);
