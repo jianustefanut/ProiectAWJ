@@ -3,30 +3,30 @@ package hello;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Persoana {
+public class Masina {
   private String name;
-  private int id;
+  private String marca;
 
-  public Persoana() {}
+  public Masina() {}
 
-  public Persoana(int id, String name) {
+  public Masina(String marca, String name) {
       this.name = name;
-      this.id = id;
+      this.marca = marca;
   }
 
   public String getName() {
       return this.name;
   }
 
-  public int getId() {
-    return this.id;
+  public String getMarca() {
+    return this.marca;
   }
   
   public void setName(String name){
 	  this.name = name;
   }
   
-  public void setId(int ID){
-	  this.id = ID;
+  public void setMarca(String marca){
+	  this.marca = marca;
   }
 }

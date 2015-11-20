@@ -41,7 +41,7 @@ public class PersoanaController {
     return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
   }
 
-  @RequestMapping(value="/persoana/{id}", method = RequestMethod.DEL)
+  @RequestMapping(value="/persoana/{id}", method = RequestMethod.DELETE)
   public ResponseEntity remove(@PathVariable("id") int id) {
     for(Persoana p : this.persoane) {
       if(p.getId() == id) {
@@ -50,5 +50,26 @@ public class PersoanaController {
       }
     }
     return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
+  }
+  
+  @RequestMapping(value="/persoana/{id}", method = RequestMethod.PUT)
+  public ResponseEntity put(@PathVariable("id") int id) {
+    for(Persoana p : this.persoane) {
+      if(p.getId() == id) {
+        p.setId(2);
+        p.setName("maria");
+        return new ResponseEntity<Persoana>(p, new HttpHeaders(), HttpStatus.OK);
+      }
+    }
+    return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
+  }
+
+
+
+  @RequestMapping(value="/persoana/{id}/{nume}", method = RequestMethod.POST)
+   public ResponseEntity post(@PathVariable("id") int id, @PathVariable("nume") String nume) {
+    Persoana p = new Persoana(id, nume);
+    persoane.add(p);
+    return new ResponseEntity<Persoana>(p, new HttpHeaders(), HttpStatus.OK);
   }
 }
