@@ -20,7 +20,7 @@ public class SerialController {
     Serial s1 = new Serial("BreakingBad",5,62);
     Serial s2 = new Serial("TheMentalist",7,151);
     Serial s3 = new Serial("GameOfThrones",6,60);
-	Serial s4 = new Serial("Dexter",8,12);
+	Serial s4 = new Serial("Dexter",8,96);
 
     seriale.add(s1);
     seriale.add(s2);

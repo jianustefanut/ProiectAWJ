@@ -6,11 +6,619 @@
   <link rel="stylesheet" media="all" href="css/custom.css">
 </head>
 <body>
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="">AWJ Base Project</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Masina</a></li>
+            <li><a href="#">Persoana</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <hr/>
 
   <div class="container">
     <div ng-controller="HomeController">
       <h1>{{ helloWorld }}</h1>
+      <p>Writing this live into the browser...</p>
     </div>
+  </div>
+
+  <hr/>
+
+  <!-- /resources1 -->
+  <div class="container">
+    <h1>Masina</h1>
+    <h2>List all resources</h2>
+    <table class="table table-bordered">
+      <tr>
+        <th>Nume</th>
+        <th>Marca</th>
+        <th style="width:210px;">Options</th>
+      </tr>
+      <tr>
+        <td>Logan</td>
+        <td>Dacia</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>320</td>
+        <td>BMW</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>A8</td>
+        <td>Audi</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+    </table>
+
+    <div class="row">
+      <div class="col-md-3">
+        <h2>Editeaza o masina</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="marca">Marca</label>
+            <input type="text" class="form-control" id="marca" placeholder="Attribute 1">
+          </div>
+          <div class="form-group">
+            <label for="nume">Nume</label>
+            <input type="text" class="form-control" id="nume" placeholder="Attribute 2">
+          </div>
+
+          <button type="submit" class="btn btn-info">Save</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Adauga o masina</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="marca">Marca</label>
+            <input type="text" class="form-control" id="marca" placeholder="Attribute 1">
+          </div>
+          <div class="form-group">
+            <label for="nume">Nume</label>
+            <input type="text" class="form-control" id="nume" placeholder="Attribute 2">
+          </div>
+          <button type="submit" class="btn btn-success">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Afiseaza o masina</h2>
+      </div>
+      <div class="col-md-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Dacia_Logan_front_20070611.jpg" class="img-thumbnail"/>
+      </div>
+      <div class="col-md-10">
+        <h1>Dacia</h1>
+        <p>Logan</p>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- /resources2-->
+  <div class="container">
+    <h1>Persoana</h1>
+    <h2>List all resources</h2>
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th>Nume</th>
+        <th style="width:210px;">Options</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Paul</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Paul</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+    </table>
+
+    <div class="row">
+      <div class="col-md-3">
+        <h2>Editeaza o persoana</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" placeholder="Attribute 1">
+          </div>
+          <div class="form-group">
+            <label for="nume">Nume</label>
+            <input type="text" class="form-control" id="nume" placeholder="Attribute 2">
+          </div>
+          <button type="submit" class="btn btn-info">Save</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Adauga o persoana</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" placeholder="Attribute 1">
+          </div>
+          <div class="form-group">
+            <label for="nume">Nume</label>
+            <input type="text" class="form-control" id="nume" placeholder="Attribute 2">
+          </div>
+          <button type="submit" class="btn btn-success">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Afiseaza o persoana</h2>
+      </div>
+      <div class="col-md-2">
+        <img src="http://a3.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTIwNjA4NjMzNzAzNzI4NjUy.jpg" class="img-thumbnail"/>
+      </div>
+      <div class="col-md-10">
+        <h1>1</h1>
+        <p>JOHN</p>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+  
+  <!-- /resources3 -->
+  <div class="container">
+    <h1>Serial</h1>
+    <h2>List all resources</h2>
+    <table class="table table-bordered">
+      <tr>
+        <th>Titlu</th>
+        <th>Numar Episoade</th>
+		<th>Numar Sezoane</th>
+        <th style="width:210px;">Options</th>
+      </tr>
+      <tr>
+        <td>BreakingBad</td>
+        <td>62</td>
+		<td>5</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>TheMentalist</td>
+        <td>151</td>
+		<td>7</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>GameOfThrones</td>
+        <td>60</td>
+		<td>6</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Dexter</td>
+        <td>8</td>
+		<td>96</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+    </table>
+
+    <div class="row">
+      <div class="col-md-3">
+        <h2>Editeaza un serial</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="titlu">Titlu</label>
+            <input type="text" class="form-control" id="title" placeholder="Attribute 1">
+          </div>
+          <div class="form-group">
+            <label for="numarSez">Numar Sezoane</label>
+            <input type="text" class="form-control" id="numarSez" placeholder="Attribute 2">
+          </div>
+		   <div class="form-group">
+            <label for="numarEp">Numar Episoade</label>
+            <input type="text" class="form-control" id="numarEp" placeholder="Attribute 3">
+          </div>
+
+          <button type="submit" class="btn btn-info">Save</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Adauga un serial</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="titlu">Titlu</label>
+            <input type="text" class="form-control" id="titlu" placeholder="Attribute 1">
+          </div>
+          <div class="form-group">
+            <label for="numarSez">Numar Sezoane</label>
+            <input type="text" class="form-control" id="numarSez" placeholder="Attribute 2">
+          </div>
+		   <div class="form-group">
+            <label for="numarEp">Numar Episoade</label>
+            <input type="text" class="form-control" id="numarEp" placeholder="Attribute 3">
+          </div>
+          <button type="submit" class="btn btn-success">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Afiseaza un serial</h2>
+      </div>
+      <div class="col-md-2">
+        <img src="data:image/jpeg;base64,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" class="img-thumbnail"/>
+      </div>
+      <div class="col-md-10">
+        <h1>BreakingBad</h1>
+        <p>62 - 5</p>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+  
+  <!-- /resources4 -->
+  <div class="container">
+    <h1>Telefon</h1>
+    <h2>List all resources</h2>
+    <table class="table table-bordered">
+      <tr>
+        <th>Model</th>
+        <th>Numar</th>
+        <th style="width:210px;">Options</th>
+      </tr>
+      <tr>
+        <td>Nokia</td>
+        <td>110</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Motorola</td>
+        <td>5100</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Samsung</td>
+        <td>201</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+    </table>
+
+    <div class="row">
+      <div class="col-md-3">
+        <h2>Editeaza un telefon</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="model">Model</label>
+            <input type="text" class="form-control" id="model" placeholder="Attribute 1">
+          </div>
+          <div class="form-group">
+            <label for="numar">Numar</label>
+            <input type="text" class="form-control" id="numar" placeholder="Attribute 2">
+          </div>
+
+          <button type="submit" class="btn btn-info">Save</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Adauga un telefon</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="model">Model</label>
+            <input type="text" class="form-control" id="model" placeholder="Attribute 1">
+          </div>
+          <div class="form-group">
+            <label for="numar">Numar</label>
+            <input type="text" class="form-control" id="numar" placeholder="Attribute 2">
+          </div>
+          <button type="submit" class="btn btn-success">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Afiseaza un telefon</h2>
+      </div>
+      <div class="col-md-2">
+        <img src="http://drop.ndtv.com/TECH/product_database/images/530201343822PM_635_nokia_110.png" class="img-thumbnail"/>
+      </div>
+      <div class="col-md-10">
+        <h1>Nokia</h1>
+        <p>110</p>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="container">
+    <footer class="footer">
+      <p class="text-muted pull-left">AWJ Base Project &copy; 2015-2016</p>
+      <p class="text-muted pull-right">Jianu Stefanut-Alexandru, 334AA</p>
+    </footer>
   </div>
 
   <script src="js/jquery-1.11.3.min.js"></script>
