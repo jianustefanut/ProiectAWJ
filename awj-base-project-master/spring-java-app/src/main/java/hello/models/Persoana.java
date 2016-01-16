@@ -1,11 +1,12 @@
-package hello;
+package hello.models;
 
 import java.util.List;
 import java.util.ArrayList;
 
 public class Persoana {
-  private String name;
   private int id;
+  private String name;
+
 
   public Persoana() {}
 

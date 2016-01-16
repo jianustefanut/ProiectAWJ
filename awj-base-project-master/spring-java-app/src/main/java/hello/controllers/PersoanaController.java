@@ -1,10 +1,7 @@
-package hello;
+package hello.controllers;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.PathVariable;
+import hello.models.Persoana;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +21,12 @@ public class PersoanaController {
     persoane.add(p1);
     persoane.add(p2);
     persoane.add(p3);
+  }
+
+  @RequestMapping(value="/persoana", method = RequestMethod.POST)
+  public ResponseEntity create(@RequestBody Persoana p4) {
+    persoane.add(p4);
+    return new ResponseEntity<Persoana>(p4, new HttpHeaders(), HttpStatus.OK);
   }
 
   @RequestMapping(value="/persoana", method = RequestMethod.GET)
@@ -52,24 +55,16 @@ public class PersoanaController {
     return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
   }
   
-  @RequestMapping(value="/persoana/{id}", method = RequestMethod.PUT)
-  public ResponseEntity put(@PathVariable("id") int id) {
+  @RequestMapping(value="/persoana/{initialId}/{id}/{name}", method = RequestMethod.PUT)
+  public ResponseEntity put(@PathVariable("initialId") int initialId, @PathVariable("id") int id, @PathVariable("name") String name) {
     for(Persoana p : this.persoane) {
-      if(p.getId() == id) {
-        p.setId(2);
-        p.setName("maria");
+      if(p.getId() == initialId) {
+        p.setId(id);
+        p.setName(name);
         return new ResponseEntity<Persoana>(p, new HttpHeaders(), HttpStatus.OK);
       }
     }
     return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
   }
 
-
-
-  @RequestMapping(value="/persoana/{id}/{nume}", method = RequestMethod.POST)
-   public ResponseEntity post(@PathVariable("id") int id, @PathVariable("nume") String nume) {
-    Persoana p = new Persoana(id, nume);
-    persoane.add(p);
-    return new ResponseEntity<Persoana>(p, new HttpHeaders(), HttpStatus.OK);
-  }
 }

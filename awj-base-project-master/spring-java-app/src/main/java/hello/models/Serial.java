@@ -1,19 +1,29 @@
-package hello;
+package hello.models;
 
 import java.util.List;
 import java.util.ArrayList;
 
 public class Serial {
+  private int id;
   private String titlu;
-  private int numarEp;
   private int numarSez;
+  private int numarEp;
 
   public Serial() {}
 
-  public Serial(String titlu, int numarSez, int numarEp) {
+  public Serial(int id,String titlu, int numarSez, int numarEp) {
+      this.id = id;
       this.titlu = titlu;
       this.numarSez = numarSez;
 	  this.numarEp = numarEp;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public int getId() {
+    return id;
   }
 
   public String getTitlu() {
